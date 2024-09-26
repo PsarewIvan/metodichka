@@ -1,7 +1,9 @@
 .baseline-table {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    row-gap: 16px;
+    column-gap: 32px;
+    width: fit-content;
 
     &__row {
         display: flex;
@@ -13,6 +15,7 @@
         flex-direction: column;
         gap: 4px;
         min-width: 128px;
+        width: fit-content;
 
         &_grow {
             .baseline-table__row-text {
