@@ -1,0 +1,8 @@
+include ../icons/icon-video.pug
+
+mixin button-link(text, href='/', size='s', theme='primary', className='', icon)
+    - var classes = size + ' ' + theme + ' ' + className;
+    a.button(href=href class=classes)
+        if icon === 'video'
+            +icon-video('button__icon')
+        = text

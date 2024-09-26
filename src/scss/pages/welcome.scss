@@ -1,0 +1,151 @@
+.welcome-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 0;
+    margin: 0;
+
+    &__item {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__item-icon {
+        flex-shrink: 0;
+        width: 12px;
+        height: 12px;
+        margin-top: 6px;
+
+        &.donut {
+            color: rgba(220, 48, 48, 1);
+        }
+
+        &.triangle {
+            color: rgba(0, 135, 204, 1);
+        }
+
+        &.diamond {
+            color: rgba(0, 164, 59, 1);
+        }
+
+        &.circle {
+            color: #857ac5;
+        }
+
+        &.star {
+            color: #ffc000;
+        }
+
+        &.trapeze {
+            color: #dc3030;
+        }
+
+        &.dots {
+            color: #0087cc;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    &__link {
+        color: #016aa2;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-decoration: none;
+    }
+}
+
+.welcome-webinar-link {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+
+    &__link {
+        width: fit-content;
+    }
+}
+
+.welcome-homework {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 16px;
+        border-radius: 8px;
+        background: rgba(1, 144, 219, 0.08);
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    &__text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+}
+
+.welcome-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    padding: 24px 0 0;
+    margin: 0;
+    list-style: none;
+}
+
+.welcome-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(1, 144, 219, 0.48);
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        color: #0190db;
+        transition: all 0.2s;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 20px;
+        color: #0190db;
+        transition: all 0.2s;
+    }
+
+    &:hover {
+        border-color: #006fbc;
+
+        .welcome-link__icon {
+            color: #006fbc;
+        }
+
+        .welcome-link__text {
+            color: #006fbc;
+        }
+    }
+}

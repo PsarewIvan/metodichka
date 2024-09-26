@@ -1,0 +1,79 @@
+extends ../layout.pug
+
+block variables
+  - var page = 'welcome'
+
+block content
+    include ../includes/header.pug
+    include ../components/h2.pug
+    include ../components/h3.pug
+    include ../components/button-link.pug
+    include ../icons/icon-donut.pug
+    include ../icons/icon-triangle.pug
+    include ../icons/icon-diamond.pug
+    include ../icons/icon-circle.pug
+    include ../icons/icon-star.pug
+    include ../icons/icon-trapeze.pug
+    include ../icons/icon-dots.pug
+    include ../icons/icon-cap.pug
+    include ../icons/icon-book.pug
+    include ../icons/icon-letter.pug
+
+    .main-content(id='js-main-content')
+        +h2('01. Знакомство')
+        +h3('Ещё один заголовок, если нужен')
+        .index-text Знакомство  –  это эксперимент по созданию идеально работающей схемы для ведения бизнеса салона красоты. Мы будем отрабатывать каждый винтик отдельно, разбирать как его еще можно усовершенствовать, что добавить, что убавить. И в процессе у нас по-тихоньку начнет вырисовываться эта идеальная инструкция, при следовании которой можно будет избежать многих ошибок в салонном бизнесе.
+        ul.welcome-list
+            li.welcome-list__item
+                +icon-donut('welcome-list__item-icon donut')
+                .welcome-list__content
+                    .welcome-list__title Почему
+                    .welcome-list__text Почему мы это решили делать и почему мы не будем брать денег
+                    a(href='/').welcome-list__link Ссылка
+            li.welcome-list__item
+                +icon-triangle('welcome-list__item-icon triangle')
+                .welcome-list__content
+                    .welcome-list__text Как будет проходить марафон, анонс, час в неделю катя, далее д/з и клиентский отдел с обучением
+                    a(href='/').welcome-list__link Ссылка
+            li.welcome-list__item
+                +icon-diamond('welcome-list__item-icon diamond')
+                .welcome-list__content
+                    .welcome-list__text Как будет идти работа с платными модулями
+            li.welcome-list__item
+                +icon-circle('welcome-list__item-icon circle')
+                .welcome-list__content
+                    .welcome-list__title Ставим план
+                    .welcome-list__text Ставим план на октябрь, ноябрь и декабрь. Объясняем как работает Той и как составлен план (разработать формулу справедливого роста и использовать ее для мотивации персонала)
+            li.welcome-list__item
+                +icon-star('welcome-list__item-icon star')
+                .welcome-list__content
+                    .welcome-list__text Объясняем как работает светофор ( это то, что может не будет в первом марафоне)
+                    a(href='/').welcome-list__link Ссылка
+            li.welcome-list__item
+                +icon-trapeze('welcome-list__item-icon trapeze')
+                .welcome-list__content
+                    .welcome-list__text Объясняем как работает светофор ( это то, что может не будет в первом марафоне)
+            li.welcome-list__item
+                +icon-dots('welcome-list__item-icon dots')
+                .welcome-list__content
+                    .welcome-list__text Анонимный ящик
+        .welcome-webinar-link
+            +button-link('Ссылка на вебинар', '/', 's', 'primary', 'welcome-webinar-link__link', 'video')
+        .welcome-homework
+            .welcome-homework__content
+                .welcome-homework__title Домашнее задание
+                .welcome-homework__text Узнать про каждого мастера ( какой график хочет, какие условия, какие планы на след год, что нужно сделать, как она считает, чтобы увеличить ее выручку на 20%- это опросник.) самим узнать какое место занимает по выручки, какие отзывы  ( тут рассказать всем про отзывы) какая возвратность по клиентам
+        ul.welcome-links
+            li
+                a.welcome-link(href='/')
+                    +icon-cap('welcome-link__icon')
+                    span.welcome-link__text Записаться на обучение
+            li
+                a.welcome-link(href='/')
+                    +icon-book('welcome-link__icon')
+                    span.welcome-link__text База знаний
+            li
+                a.welcome-link(href='/')
+                    +icon-letter('welcome-link__icon')
+                    span.welcome-link__text Обратная связь
+        

@@ -1,0 +1,47 @@
+block content
+    include ../icons/icon-burger.pug
+    include ../icons/icon-cross.pug
+    include ../icons/icon-logo.pug
+    include ../icons/icon-arrow-left.pug
+
+    header.header.js-header
+        button.header-burger.js-header-burger(type='button')
+            +icon-burger('header-burger__icon burger')
+            +icon-cross('header-burger__icon cross')
+        .title-wrapper
+            h1.title Методичка
+            .title-logo
+                +icon-logo('title-logo__icon')
+            p.title__sub-text Название салона может быть достаточно длинным
+        nav.nav.js-nav
+            a.header-back(href='/')
+                +icon-arrow-left('header-back__icon')
+                span.header-back__text Вернуться в SONLINE
+            if page !== 'index'
+                ul.nav_list
+                    li.nav-element
+                        a.nav-link(href='/metrics.html' class=page === 'metrics' ? 'nav-link_active' : '') Показатели
+                    li.nav-element
+                        a.nav-link(href='/welcome.html' class=page === 'welcome' ? 'nav-link_active' : '') 01. Знакомство соглашения
+                    li.nav-element
+                        a.nav-link(href='/motivation.html' class=page === 'motivation' ? 'nav-link_active' : '') 02. Мотивация
+                    li.nav-element
+                        a.nav-link(href='/bonuses.html' class=page === 'bonuses' ? 'nav-link_active' : '') 03. Бонусы
+                    li.nav-element
+                        a.nav-link(href='/visits-work.html' class=page === 'visits-work' ? 'nav-link_active' : '') 04. Работа с визитом
+                    li.nav-element
+                        a.nav-link(href='/fight-cancellations.html' class=page === 'fight-cancellations' ? 'nav-link_active' : '') 05. Бой отменам
+                    li.nav-element
+                        a.nav-link(href='/handling-messages.html' class=page === 'handling-messages' ? 'nav-link_active' : '') 06. Работа с сообщениями
+                    li.nav-element
+                        a.nav-link(href='/administrator.html' class=page === 'administrator' ? 'nav-link_active' : '') 07. Администратор
+                    li.nav-element
+                        a.nav-link(href='/promotions.html' class=page === 'promotions' ? 'nav-link_active' : '') 08. Акции
+                    li.nav-element
+                        a.nav-link(href='/certificates.html' class=page === 'certificates' ? 'nav-link_active' : '') 09. Подарочные сертификаты
+                    li.nav-element
+                        a.nav-link(href='/follow.html' class=page === 'follow' ? 'nav-link_active' : '') 10. Следим
+                    li.nav-element
+                        a.nav-link(href='/anchors.html' class=page === 'anchors' ? 'nav-link_active' : '') 11. Якоря
+                    li.nav-element
+                        a.nav-link(href='/handling-messages.html' class=page === 'handling-messages' ? 'nav-link_active' : '') 12. Подводим итоги
