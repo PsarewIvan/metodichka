@@ -73,6 +73,14 @@
 
     &__link {
         width: fit-content;
+
+        @include mobile {
+            min-height: 40px;
+            width: auto;
+            font-size: 14px !important;
+            line-height: 20px !important;
+            font-weight: 400 !important;
+        }
     }
 }
 
@@ -110,6 +118,11 @@
     padding: 24px 0 0;
     margin: 0;
     list-style: none;
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .welcome-link {

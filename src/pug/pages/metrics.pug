@@ -14,7 +14,7 @@ block content
         +h2('Показатели')
         +h3('Исходные показатели')
         .baseline-table
-                .baseline-table__row-block
+                .baseline-table__row-block.full-width
                     .baseline-table__row-title Сентябрь 2023
                     .baseline-table__row-text 100 000 ₽
                 .baseline-table__row-block
@@ -23,7 +23,7 @@ block content
                 .baseline-table__row-block.baseline-table__row-block_grow
                     .baseline-table__row-title Рост
                     .baseline-table__row-text 20%
-                .baseline-table__row-block
+                .baseline-table__row-block.full-width
                     .baseline-table__row-title Октябрь 2023
                     .baseline-table__row-text 130 000 ₽
                 .baseline-table__row-block
@@ -32,7 +32,7 @@ block content
                 .baseline-table__row-block.baseline-table__row-block_grow
                     .baseline-table__row-title Рост
                     .baseline-table__row-text 20% + 10%
-                .baseline-table__row-block
+                .baseline-table__row-block.full-width
                     .baseline-table__row-title Ноябрь 2023
                     .baseline-table__row-text 130 000 ₽
                 .baseline-table__row-block
@@ -41,7 +41,7 @@ block content
                 .baseline-table__row-block.baseline-table__row-block_grow
                     .baseline-table__row-title Рост
                     .baseline-table__row-text 20% + 10%
-                .baseline-table__row-block
+                .baseline-table__row-block.full-width
                     .baseline-table__row-title Декабрь 2023
                     .baseline-table__row-text 130 000 ₽
                 .baseline-table__row-block
@@ -52,127 +52,128 @@ block content
                     .baseline-table__row-text 20% + 10%
         .baseline-table-description * Рассчитывается исходя из естественного роста предыдущего месяца +10%
         +h3('Toy')
-        table.main-table
-            thead
-                tr
-                    th.border-right(colspan="3") Октябрь 2024
-                    th.border-right(colspan="3") Ноябрь 2024
-                    th(colspan="3") Декабрь 2024
-                tr
-                    th.day-column Дн
-                    th.content-column План
-                    th.content-column.border-right Приход
-                    th.day-column Дн
-                    th.content-column План
-                    th.content-column.border-right Приход
-                    th.day-column Дн
-                    th.content-column План
-                    th.content-column Приход
-            tbody
-                tr
-                    td.center 1
-                    td 111 000 ₽
-                    td.border-right 111 000 ₽
-                    td.center 1
-                    td 111 000 ₽
-                    td.border-right
-                    td.center.text-error 1
-                    td 170 000 ₽
-                    td
-                tr.green
-                    td.center.status-ok 2
-                    td.status-ok 120 000 ₽
-                    td.border-right.status-ok 121 000 ₽
-                    td.center.text-error 2
-                    td 180 000 ₽
-                    td.border-right
-                    td.center 2
-                    td 111 000 ₽
-                    td
-                tr.green
-                    td.center.status-ok 3
-                    td.status-ok 130 000 ₽
-                    td.border-right.status-ok 148 000 ₽
-                    td.center.text-error 3
-                    td 170 000 ₽
-                    td.border-right
-                    td.center 3
-                    td 130 000 ₽
-                    td
-                tr.red
-                    td.center.status-error 4
-                    td.status-error 96 000 ₽
-                    td.border-right.status-error 82 000 ₽
-                    td.center 4
-                    td 111 000 ₽
-                    td.border-right
-                    td.center 4
-                    td 120 000 ₽
-                    td
-                tr.red
-                    td.center.text-error.status-error 5
-                    td.status-error 180 000 ₽
-                    td.border-right.status-error 30 000 ₽
-                    td.center 5
-                    td 180 000 ₽
-                    td.border-right
-                    td.center 5
-                    td 180 000 ₽
-                    td
-                tr.green
-                    td.center.text-error.status-ok 6
-                    td.status-ok 170 000 ₽
-                    td.border-right.status-ok 179 000 ₽
-                    td.center 6
-                    td 120 000 ₽
-                    td.border-right
-                    td.center 6
-                    td 111 000 ₽
-                    td
-                tr
-                    td.center 7
-                    td 111 000 ₽
-                    td.border-right 111 000 ₽
-                    td.center 7
-                    td 111 000 ₽
-                    td.border-right
-                    td.center.text-error 7
-                    td 180 000 ₽
-                    td
-                tr.red
-                    td.center.status-error 8
-                    td.status-error 120 000 ₽
-                    td.border-right.status-error 111 000 ₽
-                    td.center 8
-                    td 111 000 ₽
-                    td.border-right
-                    td.center.text-error 8
-                    td 170 000 ₽
-                    td
-                tr
-                    td.center.status-error 9
-                    td.status-error 130 000 ₽
-                    td.border-right.status-error 111 000 ₽
-                    td.center.text-error 9
-                    td 130 000 ₽
-                    td.border-right
-                    td.center 9
-                    td 111 000 ₽
-                    td
-                tr
-                    td.center.status-ok 10
-                    td.status-ok 96 000 ₽
-                    td.border-right.status-ok 111 000 ₽
-                    td.center.text-error 10
-                    td 170 000 ₽
-                    td.border-right
-                    td.center 10
-                    td 111 000 ₽
-                    td
+        .main-table-wrapper
+            table.main-table
+                thead
+                    tr
+                        th.border-right(colspan="3") Октябрь 2024
+                        th.border-right(colspan="3") Ноябрь 2024
+                        th(colspan="3") Декабрь 2024
+                    tr
+                        th.day-column Дн
+                        th.content-column План
+                        th.content-column.border-right Приход
+                        th.day-column Дн
+                        th.content-column План
+                        th.content-column.border-right Приход
+                        th.day-column Дн
+                        th.content-column План
+                        th.content-column Приход
+                tbody
+                    tr
+                        td.center 1
+                        td 111 000 ₽
+                        td.border-right 111 000 ₽
+                        td.center 1
+                        td 111 000 ₽
+                        td.border-right
+                        td.center.text-error 1
+                        td 170 000 ₽
+                        td
+                    tr.green
+                        td.center.status-ok 2
+                        td.status-ok 120 000 ₽
+                        td.border-right.status-ok 121 000 ₽
+                        td.center.text-error 2
+                        td 180 000 ₽
+                        td.border-right
+                        td.center 2
+                        td 111 000 ₽
+                        td
+                    tr.green
+                        td.center.status-ok 3
+                        td.status-ok 130 000 ₽
+                        td.border-right.status-ok 148 000 ₽
+                        td.center.text-error 3
+                        td 170 000 ₽
+                        td.border-right
+                        td.center 3
+                        td 130 000 ₽
+                        td
+                    tr.red
+                        td.center.status-error 4
+                        td.status-error 96 000 ₽
+                        td.border-right.status-error 82 000 ₽
+                        td.center 4
+                        td 111 000 ₽
+                        td.border-right
+                        td.center 4
+                        td 120 000 ₽
+                        td
+                    tr.red
+                        td.center.text-error.status-error 5
+                        td.status-error 180 000 ₽
+                        td.border-right.status-error 30 000 ₽
+                        td.center 5
+                        td 180 000 ₽
+                        td.border-right
+                        td.center 5
+                        td 180 000 ₽
+                        td
+                    tr.green
+                        td.center.text-error.status-ok 6
+                        td.status-ok 170 000 ₽
+                        td.border-right.status-ok 179 000 ₽
+                        td.center 6
+                        td 120 000 ₽
+                        td.border-right
+                        td.center 6
+                        td 111 000 ₽
+                        td
+                    tr
+                        td.center 7
+                        td 111 000 ₽
+                        td.border-right 111 000 ₽
+                        td.center 7
+                        td 111 000 ₽
+                        td.border-right
+                        td.center.text-error 7
+                        td 180 000 ₽
+                        td
+                    tr.red
+                        td.center.status-error 8
+                        td.status-error 120 000 ₽
+                        td.border-right.status-error 111 000 ₽
+                        td.center 8
+                        td 111 000 ₽
+                        td.border-right
+                        td.center.text-error 8
+                        td 170 000 ₽
+                        td
+                    tr
+                        td.center.status-error 9
+                        td.status-error 130 000 ₽
+                        td.border-right.status-error 111 000 ₽
+                        td.center.text-error 9
+                        td 130 000 ₽
+                        td.border-right
+                        td.center 9
+                        td 111 000 ₽
+                        td
+                    tr
+                        td.center.status-ok 10
+                        td.status-ok 96 000 ₽
+                        td.border-right.status-ok 111 000 ₽
+                        td.center.text-error 10
+                        td 170 000 ₽
+                        td.border-right
+                        td.center 10
+                        td 111 000 ₽
+                        td
         +h3('Выручка по мастерам')
         ul.masters-list
             li.masters-list__item.master(style="--percent-value: 12.04%")
-                .master__avatar
+                .master__avatar.master__avatar_aqua
                     span АА
                 .master__content
                     .master__text-block
@@ -181,7 +182,7 @@ block content
                     .master__progress
                         .master__progress-bar
             li.masters-list__item.master(style="--percent-value: 11.78%")
-                .master__avatar
+                .master__avatar.master__avatar_default
                     span АВ
                     img.master__avatar-img(src='img/avatar1.jpg')
                 .master__content
@@ -191,7 +192,7 @@ block content
                     .master__progress
                         .master__progress-bar
             li.masters-list__item.master(style="--percent-value: 10.72%")
-                .master__avatar
+                .master__avatar.master__avatar_lavender
                     span ЕМ
                 .master__content
                     .master__text-block
@@ -200,7 +201,7 @@ block content
                     .master__progress
                         .master__progress-bar
             li.masters-list__item.master(style="--percent-value: 8.37%")
-                .master__avatar
+                .master__avatar.master__avatar_default
                     span ТС
                     img.master__avatar-img(src='img/avatar2.jpg')
                 .master__content
@@ -210,7 +211,7 @@ block content
                     .master__progress
                         .master__progress-bar
             li.masters-list__item.master(style="--percent-value: 4.82%")
-                .master__avatar
+                .master__avatar.master__avatar_sandy
                     span УП
                 .master__content
                     .master__text-block

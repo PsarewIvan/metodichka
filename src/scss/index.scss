@@ -42,13 +42,13 @@ body {
 
     @include tablet {
         margin-left: 0;
-        margin-top: 112px;
-        padding: 16px 32px;
+        margin-top: 73px;
+        padding: 32px;
     }
 
     @include mobile {
-        padding: 16px;
-        margin-top: 57px;
+        padding: 16px 16px 32px;
+        margin-top: 71px;
     }
 }
 
