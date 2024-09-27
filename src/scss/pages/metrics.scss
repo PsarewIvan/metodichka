@@ -164,7 +164,7 @@
 .master {
     display: flex;
     gap: 8px;
-    width: 400px;
+    max-width: 400px;
 
     &__avatar {
         overflow: hidden;
