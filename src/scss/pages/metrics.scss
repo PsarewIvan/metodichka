@@ -17,14 +17,16 @@
         min-width: 128px;
         width: fit-content;
 
+        @include mobile {
+            &.full-width {
+                grid-column: 1 / -1;
+            }
+        }
+
         &_grow {
             .baseline-table__row-text {
                 color: #1d8722;
             }
-        }
-
-        &.full-width {
-            grid-column: 1 / -1;
         }
     }
 
