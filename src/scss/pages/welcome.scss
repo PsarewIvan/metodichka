@@ -1,3 +1,18 @@
+.welcome-anchors {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &__link {
+        color: #006fbc;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration: none;
+    }
+}
+
 .welcome-list {
     display: flex;
     flex-direction: column;

@@ -5,8 +5,6 @@
 
     const burger = document.querySelector('.js-header-burger');
     const nav = document.querySelector('.js-nav');
-    // const user = document.querySelector('.js-nav-user');
-    // const mobileActions = document.querySelector('.js-header-actions-mobile');
 
     const header = document.querySelector('.js-header');
     const content = document.getElementById('js-main-content');
@@ -36,14 +34,10 @@
 
         if (window.innerWidth < 768) {
             if (!hasMobileInit) {
-                // user?.classList.add('hidden');
-                // mobileActions?.classList.remove('hidden');
             }
 
             hasMobileInit = true;
         } else if (hasMobileInit) {
-            // user?.classList.remove('hidden');
-            // mobileActions?.classList.add('hidden');
             hasMobileInit = false;
         }
     }
@@ -52,13 +46,11 @@
         if (hasMenuOpen) {
             hasMenuOpen = false;
             nav?.classList.add('hidden');
-            // user?.classList.add('hidden');
             burger?.classList.remove('open');
             document.body.classList.remove('body-lock');
         } else {
             hasMenuOpen = true;
             nav?.classList.remove('hidden');
-            // user?.classList.remove('hidden');
             burger?.classList.add('open');
             document.body.classList.add('body-lock');
         }

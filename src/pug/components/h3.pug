@@ -1,3 +1,17 @@
-mixin h3(text, className='')
+include ../icons/icon-info.pug
+include ./select.pug
+
+mixin h3(text, className='', info='', tabs='', select='')
     .title-h3(class=className)
-        h3.title-h3__text= text
+        .title-h3__wrapper
+            h3.title-h3__text= text
+            if info !== ''
+                button.title-h3__info.js-info-button(type="button")
+                    +icon-info('title-h3__info-icon')
+        if tabs !== ''
+            .tabs.js-tabs
+                button.tabs__button.active.js-tab-button(type='button') Октябрь
+                button.tabs__button.js-tab-button(type='button') Ноябрь
+                button.tabs__button.js-tab-button(type='button') Декабрь
+        if select !== ''
+            +select([{value: 'percent', text: 'По процентам'},{value: 'name', text: 'По имени'}], '', '', 'heading-select', true)

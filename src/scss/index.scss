@@ -7,11 +7,13 @@
 @import './pages/welcome.scss';
 
 @import './includes/header.scss';
+@import './includes/tabs.scss';
 
 @import './components/h2.scss';
 @import './components/h3.scss';
 @import './components/status.scss';
 @import './components/button.scss';
+@import './components/select.scss';
 
 * {
     box-sizing: border-box;

@@ -12,165 +12,170 @@ block content
 
     .main-content(id='js-main-content')
         +h2('Показатели')
-        +h3('Исходные показатели')
-        .baseline-table
-                .baseline-table__row-block.full-width
-                    .baseline-table__row-title Сентябрь 2023
-                    .baseline-table__row-text 100 000 ₽
-                .baseline-table__row-block
-                    .baseline-table__row-title Сентябрь 2024
-                    .baseline-table__row-text 120 000 ₽
-                .baseline-table__row-block.baseline-table__row-block_grow
-                    .baseline-table__row-title Рост
-                    .baseline-table__row-text 20%
-                .baseline-table__row-block.full-width
-                    .baseline-table__row-title Октябрь 2023
-                    .baseline-table__row-text 130 000 ₽
-                .baseline-table__row-block
-                    .baseline-table__row-title План на октябрь 2024*
-                    .baseline-table__row-text 163 000 ₽
-                .baseline-table__row-block.baseline-table__row-block_grow
-                    .baseline-table__row-title Рост
-                    .baseline-table__row-text 20% + 10%
-                .baseline-table__row-block.full-width
-                    .baseline-table__row-title Ноябрь 2023
-                    .baseline-table__row-text 130 000 ₽
-                .baseline-table__row-block
-                    .baseline-table__row-title План на ноябрь 2024*
-                    .baseline-table__row-text
-                .baseline-table__row-block.baseline-table__row-block_grow
-                    .baseline-table__row-title Рост
-                    .baseline-table__row-text 20% + 10%
-                .baseline-table__row-block.full-width
-                    .baseline-table__row-title Декабрь 2023
-                    .baseline-table__row-text 130 000 ₽
-                .baseline-table__row-block
-                    .baseline-table__row-title План на декабрь 2024*
-                    .baseline-table__row-text
-                .baseline-table__row-block.baseline-table__row-block_grow
-                    .baseline-table__row-title Рост
-                    .baseline-table__row-text 20% + 10%
+        .js-info
+            +h3('Исходные показатели', '', 'info')
+            .info-block.hidden.js-info-block
+                .info-block__text Мы берем Сентябрь 2023 года и сравниваем его с Сентябрем 2024 года. Например, в сентябре 2023 года салон сделал 1 000 000, в сентябре 2024 года – 1 150 000. То есть рост год к году - 15%. Это будет наш базовый %. Мы знаем нашу выручку за Октябрь 2023 года, соответственно наш базовый % по Октябрю 2024 года - 15%.
+                .info-block__text Далее мы прибавляем к базовому % прогрессивный %. В первом марафоне он будет равен 5%. Соответственно общий % роста в Октябре в нашем примере будет равняться 20%. Мы считаем, что 5% это очень большой прогрессивный %, особенно если учитывать, что если в вы будете выполнять план, в последующих месяцах он уже будет закладываться дважды (как уже рост в Октябре 2024 году и как самостоятельный прогрессивный %). Но это мы поставили это как некий идеал, которому, как нам кажется, нужно стремиться.
+                .info-block__text И на самом деле, даже если вы будете расти, а 1% месяц к месяцу — это очень хорошо!
+                .info-block__text То есть если в Октябре салон сделал 1 000 000, то план по Октябрю 2024 года будет 1 200 000. Если рост год к году отрицательный в сентябре, например в 2023 году 1 000 000, а в 2024 году - 900 000. То при планировании Октября 2024 года будет браться только прогрессивный % и план по Октябрю 2024 года будет 1 050 000. План по ноябрю 24 года, будет сформирован соответственно по итогам Октября 2024 года.
+        .baseline-table-wrapper
+            .baseline-table
+                .baseline-table__column
+                    .baseline-table__row
+                        .baseline-table__content-header Сентябрь
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Сентябрь 2023
+                            .baseline-table__content-text 100 000 ₽
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Сентябрь 2024
+                            .baseline-table__content-text 120 000 ₽
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Планируемый рост
+                            .baseline-table__content-text.green 20%
+                .baseline-table__column
+                    .baseline-table__row
+                        .baseline-table__content-header Октябрь
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Октябрь 2023
+                            .baseline-table__content-text 130 000 ₽
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title План на октябрь 2024*
+                            .baseline-table__content-text 163 000 ₽
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Планируемый рост
+                            .baseline-table__content-text.green 20% + 10%
+                .baseline-table__column
+                    .baseline-table__row
+                        .baseline-table__content-header Ноябрь
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Ноябрь 2023
+                            .baseline-table__content-text 130 000 ₽
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title План на ноябрь 2024*
+                            .baseline-table__content-text ₽
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Планируемый рост
+                            .baseline-table__content-text.green 20% + 10%
+                .baseline-table__column
+                    .baseline-table__row
+                        .baseline-table__content-header Декабрь
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Декабрь 2023
+                            .baseline-table__content-text 130 000 ₽
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title План на декабрь 2024*
+                            .baseline-table__content-text ₽
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Планируемый рост
+                            .baseline-table__content-text.green 20% + 10%
         .baseline-table-description * Рассчитывается исходя из естественного роста предыдущего месяца +10%
-        +h3('Toy')
+        .js-info
+            +h3('Toy', '', 'info', 'tabs')
         .main-table-wrapper
-            table.main-table
+            table.main-table.js-metrics-table
                 thead
                     tr
-                        th.border-right(colspan="3") Октябрь 2024
-                        th.border-right(colspan="3") Ноябрь 2024
-                        th(colspan="3") Декабрь 2024
-                    tr
                         th.day-column Дн
-                        th.content-column План
-                        th.content-column.border-right Приход
-                        th.day-column Дн
-                        th.content-column План
-                        th.content-column.border-right Приход
-                        th.day-column Дн
-                        th.content-column План
-                        th.content-column Приход
+                        th.content-column План на день
+                        th.content-column Записи на день
+                        th.content-column Приход за день
+                        th.content-column План накопительный
+                        th.content-column Приход накопительный
                 tbody
-                    tr
+                    tr.js-ellipsis-above-row
+                        td.left(colspan=6) ...
+                    tr.js-metrics-row
                         td.center 1
                         td 111 000 ₽
-                        td.border-right 111 000 ₽
-                        td.center 1
                         td 111 000 ₽
-                        td.border-right
-                        td.center.text-error 1
+                        td 111 000 ₽
                         td 170 000 ₽
-                        td
-                    tr.green
+                        td 170 000 ₽
+                    tr.js-metrics-row.green
                         td.center.status-ok 2
                         td.status-ok 120 000 ₽
-                        td.border-right.status-ok 121 000 ₽
-                        td.center.text-error 2
-                        td 180 000 ₽
-                        td.border-right
-                        td.center 2
-                        td 111 000 ₽
-                        td
-                    tr.green
+                        td.status-ok 121 000 ₽
+                        td.status-ok 180 000 ₽
+                        td.status-ok 111 000 ₽
+                        td.status-ok 111 000 ₽
+                    tr.js-metrics-row.green
                         td.center.status-ok 3
                         td.status-ok 130 000 ₽
-                        td.border-right.status-ok 148 000 ₽
-                        td.center.text-error 3
-                        td 170 000 ₽
-                        td.border-right
-                        td.center 3
-                        td 130 000 ₽
-                        td
-                    tr.red
+                        td.status-ok 148 000 ₽
+                        td.status-ok 170 000 ₽
+                        td.status-ok 130 000 ₽
+                        td.status-ok 130 000 ₽
+                    tr.js-metrics-row.red.js-today
                         td.center.status-error 4
                         td.status-error 96 000 ₽
-                        td.border-right.status-error 82 000 ₽
-                        td.center 4
-                        td 111 000 ₽
-                        td.border-right
-                        td.center 4
-                        td 120 000 ₽
-                        td
-                    tr.red
+                        td.status-error 82 000 ₽
+                        td.status-error 111 000 ₽
+                        td.status-error 120 000 ₽
+                        td.status-error 120 000 ₽
+                    tr.js-metrics-row.red
                         td.center.text-error.status-error 5
                         td.status-error 180 000 ₽
-                        td.border-right.status-error 30 000 ₽
-                        td.center 5
-                        td 180 000 ₽
-                        td.border-right
-                        td.center 5
-                        td 180 000 ₽
-                        td
-                    tr.green
+                        td.status-error 30 000 ₽
+                        td.status-error 180 000 ₽
+                        td.status-error 180 000 ₽
+                        td.status-error 180 000 ₽
+                    tr.js-metrics-row.green
                         td.center.text-error.status-ok 6
                         td.status-ok 170 000 ₽
-                        td.border-right.status-ok 179 000 ₽
-                        td.center 6
-                        td 120 000 ₽
-                        td.border-right
-                        td.center 6
-                        td 111 000 ₽
-                        td
-                    tr
+                        td.status-ok 179 000 ₽
+                        td.status-ok 120 000 ₽
+                        td.status-ok 111 000 ₽
+                        td.status-ok 111 000 ₽
+                    tr.js-metrics-row
                         td.center 7
                         td 111 000 ₽
-                        td.border-right 111 000 ₽
-                        td.center 7
                         td 111 000 ₽
-                        td.border-right
-                        td.center.text-error 7
+                        td 111 000 ₽
                         td 180 000 ₽
-                        td
-                    tr.red
+                        td 180 000 ₽
+                    tr.js-metrics-row.red
                         td.center.status-error 8
                         td.status-error 120 000 ₽
-                        td.border-right.status-error 111 000 ₽
-                        td.center 8
-                        td 111 000 ₽
-                        td.border-right
-                        td.center.text-error 8
-                        td 170 000 ₽
-                        td
-                    tr
+                        td.status-error 111 000 ₽
+                        td.status-error 111 000 ₽
+                        td.status-error 170 000 ₽
+                        td.status-error 170 000 ₽
+                    tr.js-metrics-row
                         td.center.status-error 9
                         td.status-error 130 000 ₽
-                        td.border-right.status-error 111 000 ₽
-                        td.center.text-error 9
-                        td 130 000 ₽
-                        td.border-right
-                        td.center 9
-                        td 111 000 ₽
-                        td
-                    tr
+                        td.status-error 111 000 ₽
+                        td.status-error 130 000 ₽
+                        td.status-error 111 000 ₽
+                        td.status-error 111 000 ₽
+                    tr.js-metrics-row
                         td.center.status-ok 10
                         td.status-ok 96 000 ₽
-                        td.border-right.status-ok 111 000 ₽
-                        td.center.text-error 10
-                        td 170 000 ₽
-                        td.border-right
-                        td.center 10
-                        td 111 000 ₽
-                        td
-        +h3('Выручка по мастерам')
+                        td.status-ok 111 000 ₽
+                        td.status-ok 170 000 ₽
+                        td.status-ok 111 000 ₽
+                        td.status-ok 111 000 ₽
+                    tr.js-more-button-row
+                        td.left(colspan=6)
+                            button.metrics-table-button.js-metrics-table-more-button(type='button') Показать все дни месяца
+                            button.metrics-table-button.hidden.js-metrics-table-low-button(type='button') Меньше данных
+                    tr
+                        td.border-top-bold.left.bold(colspan=4) Всего за октябрь 2024
+                        td.border-top-bold.bold 3 020 336 ₽
+                        td.border-top-bold.bold 294 580 ₽
+        +h3('Выручка по мастерам','', 'info', 'tabs', 'select')
         ul.masters-list
             li.masters-list__item.master(style="--percent-value: 12.04%")
                 .master__avatar.master__avatar_aqua
@@ -219,11 +224,81 @@ block content
                         .master__percent 4,82%
                     .master__progress
                         .master__progress-bar
-        +h3('Заполняем январь')
-        .total-time
-            .total-time__block
-                .total-time__text Рабочих часов
-                .total-time__hours 124 ч
-            .total-time__block
-                .total-time__text Занято часов
-                .total-time__hours 30 ч
+        +h3('Заполняем рабочие часы', '', 'info')
+        .baseline-table-wrapper
+            .baseline-table.baseline-table_filled
+                .baseline-table__column
+                    .baseline-table__row
+                        .baseline-table__content-header Сентябрь
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Рабочих часов
+                            .baseline-table__content-text 2484 ч
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Занято часов
+                            .baseline-table__content-text 1984 ч
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Заполнено
+                            .baseline-table__content-text.green 79.87%
+                .baseline-table__column
+                    .baseline-table__row
+                        .baseline-table__content-header Октябрь
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Рабочих часов
+                            .baseline-table__content-text 2484 ч
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Занято часов
+                            .baseline-table__content-text 1425 ч
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Заполнено
+                            .baseline-table__content-text.yellow 57.37%
+                .baseline-table__column
+                    .baseline-table__row
+                        .baseline-table__content-header Ноябрь
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Рабочих часов
+                            .baseline-table__content-text 2460 ч
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Занято часов
+                            .baseline-table__content-text 1 ч
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Заполнено
+                            .baseline-table__content-text.red 0.04%
+                .baseline-table__column
+                    .baseline-table__row
+                        .baseline-table__content-header Декабрь
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Рабочих часов
+                            .baseline-table__content-text 2700 ч
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Занято часов
+                            .baseline-table__content-text 0 ч
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Заполнено
+                            .baseline-table__content-text.red 0.00%
+                .baseline-table__column
+                    .baseline-table__row
+                        .baseline-table__content-header Январь
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Рабочих часов
+                            .baseline-table__content-text 2508 ч
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Занято часов
+                            .baseline-table__content-text 0 ч
+                    .baseline-table__row
+                        .baseline-table__content-block
+                            .baseline-table__content-title Заполнено
+                            .baseline-table__content-text.red 0.00%
