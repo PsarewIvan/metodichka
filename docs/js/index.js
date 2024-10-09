@@ -15,10 +15,10 @@
     const table = document.querySelector('.js-metrics-table');
     const tbody = table?.querySelector('tbody');
     const rows = tbody?.querySelectorAll('.js-metrics-row');
-    const ellipsisAboveRow = tbody.querySelector('.js-ellipsis-above-row');
-    const moreButton = tbody.querySelector('.js-metrics-table-more-button');
-    const lowButton = tbody.querySelector('.js-metrics-table-low-button');
-    const moreButtonsRow = tbody.querySelector('.js-more-button-row');
+    const ellipsisAboveRow = tbody?.querySelector('.js-ellipsis-above-row');
+    const moreButton = tbody?.querySelector('.js-metrics-table-more-button');
+    const lowButton = tbody?.querySelector('.js-metrics-table-low-button');
+    const moreButtonsRow = tbody?.querySelector('.js-more-button-row');
 
     if (rows) {
         let todayRow = null;
