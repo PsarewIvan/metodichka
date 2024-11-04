@@ -40,6 +40,13 @@
             if (slimSelect) {
                 slimSelect.setSelected('', false);
                 reset.classList.add('hidden');
+                const selectDiv = selectWrapper?.querySelector(
+                    '.select-component_selected'
+                );
+
+                if (selectDiv) {
+                    selectDiv.classList.remove('select-component_selected');
+                }
             }
         });
 
