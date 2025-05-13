@@ -1,8 +1,14 @@
 .baseline-table-wrapper {
     overflow: auto;
+    width: calc(100vw - 304px);
+
+    @include tablet {
+        width: 100vw;
+        margin-left: -32px;
+        padding: 0 32px;
+    }
 
     @include mobile {
-        width: calc(100% + 32px);
         margin-left: -16px;
         padding: 0 16px;
     }
@@ -25,17 +31,19 @@
 }
 
 .baseline-table {
-    min-width: 704px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     gap: 12px;
     padding: 8px 0;
 
     &_filled {
-        grid-template-columns: repeat(5, 1fr);
+        .baseline-table__column {
+            width: 134px;
+        }
     }
 
     &__column {
+        flex-shrink: 0;
+        width: 174px;
         display: flex;
         flex-direction: column;
         gap: 16px;
